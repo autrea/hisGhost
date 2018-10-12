@@ -5,14 +5,10 @@ A-Frame Web VR Project based around grief, loss and anger.
 
 
 CREDIT
-
-Created in A-Frame
-
-Voice Actor: Emily Rigaux
-
-Voice Recording: Dan Sequiera
-
-Music and Amalgamation of Code: Autrea
+1) Created in A-Frame
+2) Voice Actor: Emily Rigaux
+3) Voice Recording: Dan Sequiera
+4) Music and Amalgamation of Code: Autrea
 
 
 
