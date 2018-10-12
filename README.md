@@ -12,12 +12,12 @@ CREDIT
 LIBRARIES USED
 
 1) aframe.min.js
-  a) source: https://aframe.io/
-  b) cnd: https://aframe.io/releases/0.8.2/aframe.min.js
+  - source: https://aframe.io/
+  - cnd: https://aframe.io/releases/0.8.2/aframe.min.js
 
 2) aframe-text-geometry-component.min.js
-  a) source: https://www.npmjs.com/package/aframe-text-geometry-component
-  b) cdn: https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js
+  - source: https://www.npmjs.com/package/aframe-text-geometry-component
+  - cdn: https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js
 
 
 
