@@ -11,7 +11,7 @@ Music and Amalgamation of Code: Autrea
 LIBRARIES USED
 A-Frame
 
-aframe.min.js
+aframe.min.js\n
 source: https://aframe.io/
 cnd: https://aframe.io/releases/0.8.2/aframe.min.js
 
