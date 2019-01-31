@@ -1,4 +1,6 @@
 <!-- 
+    autumnread.com/hisghost.html
+
     Voice Acting by Emily Rigaux 
     Voice Recording by Dan Sequeira
     Website and Music Done by Autumn Read
@@ -21,15 +23,78 @@
         setTimeout(function () {
             audio.play();
         }, 20000);    
+        
+//        var content = document.body;
+//        content.toString();
+        
+        
+        document.addEventListener('keypress', function (e) {
+            var key = e.which || e.keyCode;
+            if (key == 32) {
+                 location.reload(true);
+//                audio.stop();
+//                console.log(content);
+//                refreshPage();
+//                setTimeout(function () {
+//                    audio.play();
+//                }, 20000);  
+            }
+            console.log(key);
+        });
+        
+        function refreshPage() {
+            
+            document.body.innerHTML = "";
+            document.body.innerHTML = content;
+            
+//            document.body.innerHTML = '<a-scene id="scene" light="defaultLightsEnabled: false" background="color: black">' + 
+//
+//
+//'<a-assets id="assetList">' + 
+//    '<a-asset-item id="face0" src="assets/obj/face/face0.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face1" src="assets/obj/face/face1.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face2" src="assets/obj/face/face2.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face3" src="assets/obj/face/face3.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face4" src="assets/obj/face/face4.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face5" src="assets/obj/face/face5.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face6" src="assets/obj/face/face6.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face7" src="assets/obj/face/face7.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face8" src="assets/obj/face/face8.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face9" src="assets/obj/face/face9.obj"></a-asset-item>' + 
+//    '<a-asset-item id="face10" src="assets/obj/face/face10.obj"></a-asset-item>' + 
+//    '<a-asset-item id="sad0" src="assets/obj/sad/sad0.obj"></a-asset-item>' + 
+//    '<a-asset-item id="sad1" src="assets/obj/sad/sad1.obj"></a-asset-item>' + 
+//    '<a-asset-item id="sad2" src="assets/obj/sad/sad2.obj"></a-asset-item>' + 
+//    '<a-asset-item id="sad3" src="assets/obj/sad/sad3.obj"></a-asset-item>' + 
+//    '<a-asset-item id="sad4" src="assets/obj/sad/sad4.obj"></a-asset-item>' + 
+//    '<a-asset-item id="sad5" src="assets/obj/sad/sad5.obj"></a-asset-item>' + 
+//    '<a-asset-item id="tree0" src="assets/obj/other/tree0.obj"></a-asset-item>' + 
+//    '<a-asset-item id="tree1" src="assets/obj/other/tree1.obj"></a-asset-item>' + 
+//    '<a-asset-item id="tree2" src="assets/obj/other/tree2.obj"></a-asset-item>' + 
+//    '<a-asset-item id="moon" src="assets/obj/other/moon0.obj"></a-asset-item>' + 
+//    '<a-asset-item id="ground" src="assets/obj/other/ground0.obj"></a-asset-item>' + 
+//    '<a-asset-item id="dance0" src="assets/obj/dance/dance0.obj"></a-asset-item>' + 
+//    '<a-asset-item id="dance1" src="assets/obj/dance/dance1.obj"></a-asset-item>' + 
+//    '<a-asset-item id="dance2" src="assets/obj/dance/dance2.obj"></a-asset-item>' + 
+//    '<a-asset-item id="dance3" src="assets/obj/dance/dance3.obj"></a-asset-item>' + 
+//'</a-assets>' +
+//                
+//                
+//            
+        }
+        
     </script>
 </head>
 
 <body>
     <!-- open scene -->
-    <a-scene id="scene" light="defaultLightsEnabled: false" background="color: black">
+    <a-scene id="scene" antialias="true" light="defaultLightsEnabled: false" background="color: black">
 
         <!-- load assets -->
         <a-assets id="assetList">
+            
+            <a-asset-item id="murderFont" src="assets/font/you-murderer/YouMurderer%20BB_Regular.json"></a-asset-item>
+            
             <a-asset-item id="face0" src="assets/obj/face/face0.obj"></a-asset-item>
             <a-asset-item id="face1" src="assets/obj/face/face1.obj"></a-asset-item>
             <a-asset-item id="face2" src="assets/obj/face/face2.obj"></a-asset-item>
@@ -67,6 +132,8 @@
         <a-entity light="type: spot; castShadow: true;" 
             position="0 0 60" rotation="-90 0 10" penumbra="0.8"
             intensity="0.3"color="#771111">
+            <!-- all <a-animation> tags are delayed 20 seconds to 
+                 ensure that they play in synce with the audio -->
             <a-animation attribute="position" 
                 dur="10000" fill="forwards" 
                 repeat="0" to="0 15 -5" delay="0" 
@@ -82,28 +149,65 @@
 
         <!-- text -->
         <!-- trigger warning -->
+        
         <a-entity letterSpacing="2"
-            position="-2.5 4 -10" material="color: red"
-            text-geometry="value: Trigger Warning" 
+            position="-8.5 6 -12" scale="5 5 5" 
+            rotation="-90 0 0" material="color: white; transparent: true; opacity: 0"
+            text-geometry="value: HIS GHOST" transparent="true"
             shadow>
-            <!-- all <a-animation> tags are delayed 20 seconds to 
-                 ensure that they play in synce with the audio -->
             <a-animation attribute="position" delay="20000" 
                 dur="80000" fill="forwards" ease="ease-in"
-                repeat="0" to="-2.5 4 2000">
+                repeat="0" to="-5.8 8 2000">
             </a-animation>
         </a-entity>
+        
+        <a-entity letterSpacing="2"
+            position="-8 6 -8.75" rotation="-90 0 0" scale="2 2 2"
+            material="color: white; transparent: true; opacity: 0"
+            text-geometry="value: THIS EXPERIENCE DEALS" 
+            shadow>
+            <a-animation attribute="position" delay="20000" 
+                dur="80000" fill="forwards" ease="ease-in"
+                repeat="0" to="-5.8 2 2000">
+            </a-animation>
+        </a-entity>
+        
+        <a-entity letterSpacing="2"
+            position="-8 6 -7.35" rotation="-90 0 0" scale="2 2 2"
+            material="color: white; transparent: true; opacity: 0"
+            text-geometry="value: WITH THEMES OF GRIEF" 
+            shadow>
+            <a-animation attribute="position" delay="20000" 
+                dur="80000" fill="forwards" ease="ease-in"
+                repeat="0" to="-5 1 2000">
+            </a-animation>
+        </a-entity>
+        
+        <a-entity letterSpacing="2"
+            position="-8 6 -6" rotation="-90 0 0" scale="2 2 2"
+            material="color: white; transparent: true; opacity: 0"
+            text-geometry="value: DEPRESSION AND ANGER" 
+            shadow>
+            <a-animation attribute="position" delay="20000" 
+                dur="80000" fill="forwards" ease="ease-in"
+                repeat="0" to="-5 1 2000">
+            </a-animation>
+        </a-entity>
+        
+        
 
-        <!-- please wait while it loads -->
+<!--
+         please wait while it loads 
         <a-entity letterSpacing="1"
             position="-4 3 -10" material="color: white"
             text-geometry="value: please wait while it loads" 
             shadow>
             <a-animation attribute="position" delay="20000" 
                 dur="80000" fill="forwards" ease="ease-in"
-                repeat="0" to="-2.5 4 2000">
+                repeat="0" to="-2.5 3 2000">
             </a-animation>
         </a-entity>
+-->
 
         <!-- --------------------------------------------- -->
         <!-- --------------------------------------------- -->
@@ -712,6 +816,7 @@
 
         <!-- text -->
         <!-- it's only a dream -->
+<!--
         <a-entity position="-2.75 4 -1005" material="color: red"
             text-geometry="value: it's only a dream" shadow>
             <a-animation attribute="position"  
@@ -719,6 +824,7 @@
                 repeat="0" to="-2.75 10 -20" delay="70000">
             </a-animation>
         </a-entity>
+-->
 
         <!-- end scene -->
     </a-scene>
